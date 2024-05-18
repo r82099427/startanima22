@@ -37,10 +37,14 @@ var init = function () {
   var isSmall = window.innerWidth < 1000;
 
   var ps = new ParticleSlider({
-    ptlGap: isMobile || isSmall ? 3 : 0,
-    ptlSize: isMobile || isSmall ? 3 : 1,
-    width: 1e9,
-    height: 1e9,
+    // ptlGap: isMobile || isSmall ? 3 : 0,
+    // ptlSize: isMobile || isSmall ? 3 : 1,
+    // width: 1e9,
+    // height: 1e9,
+    ptlGap: isMobile || isSmall ? 5 : 2, // 增大粒子間的間隔
+    ptlSize: isMobile || isSmall ? 5 : 1, // 增大粒子的大小
+    width: window.innerWidth, // 使用窗口寬度
+    height: window.innerHeight, // 使用窗口高度
   });
 
   // var gui = new dat.GUI();
