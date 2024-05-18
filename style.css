@@ -43,3 +43,28 @@ body > .dg {
   height: 32px;
   fill: #1da1f2;
 }
+
+@media (max-width: 960px) {
+  #particle-slider {
+    transform: scale(0.5); /* 調整縮放比例 */
+    transform-origin: center center; /* 確保縮放以中心為基準 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 200%; /* 增加寬度以防止被切掉 */
+    height: 200%; /* 增加高度以防止被切掉 */
+  }
+}
+@media (max-width: 640px) {
+  #particle-slider {
+    transform: scale(0.3); /* 調整縮放比例 */
+    transform-origin: center center; /* 確保縮放以中心為基準 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.3);
+    width: 200%; /* 增加寬度以防止被切掉 */
+    height: 200%; /* 增加高度以防止被切掉 */
+  }
+}
