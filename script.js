@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // 添加點擊事件處理程序
   document.body.addEventListener("click", function () {
     setTimeout(function () {
-      window.location.href = "http://www.yeonglong.com.tw/"; // 將 "newpage.html" 替換為目標頁面的 URL
+      window.open("http://www.yeonglong.com.tw/", "_blank"); // 在新分頁中打開
+      //window.location.href = "http://www.yeonglong.com.tw/"; // 將 "newpage.html" 替換為目標頁面的 URL
     }, 1000); // 延遲 1 秒 (1000 毫秒)
   });
 });

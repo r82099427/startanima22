@@ -43,7 +43,27 @@ body > .dg {
   height: 32px;
   fill: #1da1f2;
 }
-
+#particle-slider {
+  position: relative; /* 确保内部元素可以定位 */
+}
+.click-to-enter {
+  position: absolute;
+  bottom: 20vh; /* 距离底部20px */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 24px; /* 根据需要调整字体大小 */
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0); /* 半透明背景 */
+  border-radius: 5px;
+}
+@media (max-width: 640px) {
+  .click-to-enter {
+    font-size: 34px;
+    bottom: 40vh;
+  }
+}
 @media (max-width: 960px) {
   #particle-slider {
     transform: scale(0.5); /* 調整縮放比例 */
@@ -58,13 +78,15 @@ body > .dg {
 }
 @media (max-width: 640px) {
   #particle-slider {
-    transform: scale(0.3); /* 調整縮放比例 */
+    border: 1px solid red;
+    /* transform: scale(0.3); */
     transform-origin: center center; /* 確保縮放以中心為基準 */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.3);
-    width: 200%; /* 增加寬度以防止被切掉 */
+    transform: translate(-50%, -50%) scale(0.5);
+
+    width: 200vw; /* 增加寬度以防止被切掉 */
     height: 200%; /* 增加高度以防止被切掉 */
   }
 }
