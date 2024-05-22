@@ -5,22 +5,29 @@ document.addEventListener("DOMContentLoaded", function () {
     img.src = div.getAttribute("data-src");
     div.appendChild(img);
   });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  var lazyImages = document.querySelectorAll("div.slide[data-src]");
-  lazyImages.forEach(function (div) {
-    var img = new Image();
-    img.src = div.getAttribute("data-src");
-    div.appendChild(img);
-  });
 
   // 添加點擊事件處理程序
+  //   document.body.addEventListener("click", function () {
+  //     setTimeout(function () {
+  //       window.open("http://www.yeonglong.com.tw/", "_blank"); // 在新分頁中打開
+  //       //window.location.href = "http://www.yeonglong.com.tw/"; // 將 "newpage.html" 替換為目標頁面的 URL
+  //     }, 1000); // 延遲 1 秒 (1000 毫秒)
+  //   });
+  // });
+
+  // 添加点击事件处理程序
   document.body.addEventListener("click", function () {
-    setTimeout(function () {
-      window.open("http://www.yeonglong.com.tw/", "_blank"); // 在新分頁中打開
-      //window.location.href = "http://www.yeonglong.com.tw/"; // 將 "newpage.html" 替換為目標頁面的 URL
-    }, 1000); // 延遲 1 秒 (1000 毫秒)
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 移动设备直接打开新页面
+      window.open("http://www.yeonglong.com.tw/", "_blank");
+    } else {
+      // 桌面设备延迟一秒打开新页面
+      setTimeout(function () {
+        window.open("http://www.yeonglong.com.tw/", "_blank");
+      }, 1000); // 延迟 1 秒 (1000 毫秒)
+    }
   });
 });
 
