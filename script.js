@@ -50,7 +50,7 @@ var init = function () {
     // width: 1e9,
     // height: 1e9,
     ptlGap: isMobile || isSmall ? 8 : 2, // 增大粒子間的間隔
-    ptlSize: isMobile || isSmall ? 3 : 1, // 增大粒子的大小
+    ptlSize: isMobile || isSmall ? 2 : 1, // 增大粒子的大小
     // width: window.innerWidth, // 使用窗口寬度
     // height: window.innerHeight, // 使用窗口高度
     width: isMobile || isSmall ? window.innerWidth * 2 : window.innerWidth, // 使用窗口寬度，對於小屏幕進行縮放
