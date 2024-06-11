@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "font1";
+  src: url("/font/SourceHanSerifTC-Regular.otf") format("opentype");
+  font-style: normal;
+}
+
 html,
 body {
+  font-family: "font1";
   background-color: black;
   width: 100%;
   height: 100%;
@@ -22,27 +29,7 @@ body > .dg {
     display: block;
   }
 }
-.dribbble {
-  position: fixed;
-  display: block;
-  right: 20px;
-  bottom: 20px;
-}
-.dribbble img {
-  display: block;
-  height: 28px;
-}
-.twitter {
-  position: fixed;
-  display: block;
-  right: 64px;
-  bottom: 14px;
-}
-.twitter svg {
-  width: 32px;
-  height: 32px;
-  fill: #1da1f2;
-}
+
 #particle-slider {
   position: relative; /* 确保内部元素可以定位 */
 }
@@ -52,18 +39,53 @@ body > .dg {
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  font-size: 24px; /* 根据需要调整字体大小 */
+  font-size: 20px; /* 根据需要调整字体大小 */
+  letter-spacing: 5px;
   text-align: center;
-  padding: 10px 20px;
+  padding: 0px 20px 50px 20px;
   background-color: rgba(0, 0, 0, 0); /* 半透明背景 */
   border-radius: 5px;
 }
 @media (max-width: 640px) {
   .click-to-enter {
     font-size: 34px;
-    bottom: 40vh;
+    letter-spacing: 10px;
+    bottom: 65vh;
   }
 }
+@media (max-width: 960px) {
+  .click-to-enter {
+    font-size: 34px;
+    letter-spacing: 10px;
+    bottom: 65vh;
+  }
+}
+/* 定義動畫 */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 1; /* 開始和結束時的透明度為100% */
+  }
+  50% {
+    opacity: 0.5; /* 中間時的透明度降至50% */
+  }
+}
+
+.click-to-enter {
+  opacity: 0; /* 初始透明度設為0 */
+  animation: fadeIn 2s ease-out 0s 1, fadeInOut 2s ease-in-out 2s infinite;
+}
+
+/* 第一部分動畫：從透明到完全顯示 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 960px) {
   #particle-slider {
     transform: scale(0.5); /* 調整縮放比例 */
