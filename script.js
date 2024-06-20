@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (isMobile) {
       // 移动设备直接打开新页面
-      window.open("http://www.yeonglong.com.tw/", "_blank");
+      window.open("http://www.yeonglong.com.tw?page_id=39639", "_blank");
     } else {
       // 桌面设备延迟一秒打开新页面
       setTimeout(function () {
-        window.open("http://www.yeonglong.com.tw/", "_blank");
+        window.open("http://www.yeonglong.com.tw?page_id=39639", "_blank");
       }, 1000); // 延迟 1 秒 (1000 毫秒)
     }
   });
