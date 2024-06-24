@@ -100,7 +100,7 @@ body > .dg {
 }
 @media (max-width: 640px) {
   #particle-slider {
-    border: 1px solid red;
+    /*border: 1px solid red; */
     /* transform: scale(0.3); */
     transform-origin: center center; /* 確保縮放以中心為基準 */
     position: absolute;
